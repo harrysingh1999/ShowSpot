@@ -1,8 +1,9 @@
 // import './App.css'
 import React from "react"
-import Home from "./Home/Home"
+import Home from "./Components/Home/Home"
 import { Outlet } from "react-router-dom"
-import Header from "./Header/Header"
+import Header from "./Components/Header/Header"
+import Footer from "./Components/Footer/Footer"
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
     <>
       <Header/>
       <Outlet/>
+      <Footer/>
     </>
   )
 }

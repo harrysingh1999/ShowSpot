@@ -12,11 +12,13 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
+import logo from "/logo.jpg"
+import profile from "/profile.jpg"
+import { NavLink } from 'react-router-dom';
 
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const settings = ['Profile', 'Account', 'Dashboard'];
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -83,7 +85,6 @@ function ResponsiveAppBar() {
     <AppBar position="static">
       <Container maxWidth="lg">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
             noWrap
@@ -99,7 +100,10 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            <NavLink to="/">
+            <img src={logo} alt="logo" 
+            className='w-24 h-10 object-cover rounded-2xl'/>
+            </NavLink>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -133,7 +137,6 @@ function ResponsiveAppBar() {
             >
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
             variant="h5"
             noWrap
@@ -150,10 +153,10 @@ function ResponsiveAppBar() {
               textDecoration: 'none',
             }}
           >
-            LOGO
+            <img src={logo} alt="" />
           </Typography>
           <Search 
-          className='!w-44'>
+          className='md:!w-96 !rounded-2xl'>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
@@ -169,7 +172,7 @@ function ResponsiveAppBar() {
           <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+                <Avatar alt="Profile" src={profile} />
               </IconButton>
             </Tooltip>
             <Menu
