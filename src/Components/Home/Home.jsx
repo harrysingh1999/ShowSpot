@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import banner from "/banner.png";
-import download from "/banner.jpg";
-import StarBorderIcon from '@mui/icons-material/StarBorder';
+import banner from "/banner.jpg";
 import Rating from '@mui/material/Rating';
 
 export default function Home() {
@@ -25,7 +23,7 @@ export default function Home() {
     <>
       <div className="mb-8">
         <img
-          src={download}
+          src={banner}
           alt="All rise"
           style={{ height: "600px", width: "100vw", objectFit: "cover" }}
         />
