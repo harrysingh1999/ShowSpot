@@ -23,8 +23,8 @@ export default function Summary() {
   return (
     <>
       {fetchedSummary && (
-        <div className="flex mx-10 mt-10">
-         <div className="flex flex-col "
+        <div className="flex flex-col md:flex-row mx-6 md:mx-10 mt-10">
+         <div className="flex flex-col mb-6"
           style={{ flex: 1 }}>
          <img
             src={
@@ -44,7 +44,7 @@ export default function Summary() {
             </button>
          </div>
 
-          <div className="ml-10 " style={{ flex: 2 }}>
+          <div className="md:ml-10 " style={{ flex: 2 }}>
             <p className="text-3xl mb-4 ms-4">{fetchedSummary.name}</p>
             <div className="bg-gray-100 rounded-lg p-4 mb-4">
               <p className="text-lg text-gray-800 mb-2">Details:</p>

@@ -42,7 +42,7 @@ export default function ShowTicketForm() {
   }, []);
 
   return (
-    <div className="flex mt-20 justify-center">
+    <div className="flex flex-col md:flex-row mt-20 mx-6 justify-center">
       <div>
         {fetchedDetails && (
           <div className="flex flex-col items-center border border-b border-gray-400 rounded-xl">
@@ -78,7 +78,8 @@ export default function ShowTicketForm() {
             Name:
           </label>
           <input
-            className="shadow appearance-none border rounded w-72 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            className="shadow appearance-none border rounded w-full md:w-72 py-2 px-3 text-gray-700 leading-tight
+             focus:outline-none focus:shadow-outline"
             id="name"
             type="text"
             name="name"

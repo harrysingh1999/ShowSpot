@@ -50,7 +50,6 @@ const Search = styled('div')(({ theme }) => ({
     width: '100%',
     '& .MuiInputBase-input': {
       padding: theme.spacing(1, 1, 1, 0),
-      // vertical padding + font size from searchIcon
       paddingLeft: `calc(1em + ${theme.spacing(4)})`,
       transition: theme.transitions.create('width'),
       [theme.breakpoints.up('sm')]: {
@@ -85,7 +84,7 @@ function ResponsiveAppBar() {
     <AppBar position="static">
       <Container maxWidth="lg">
         <Toolbar disableGutters>
-          <Typography
+          {/* <Typography
             variant="h6"
             noWrap
             component="a"
@@ -99,14 +98,14 @@ function ResponsiveAppBar() {
               color: 'inherit',
               textDecoration: 'none',
             }}
-          >
+          > */}
             <NavLink to="/">
             <img src={logo} alt="logo" 
-            className='w-24 h-10 object-cover rounded-2xl'/>
+            className='w-24 h-10 object-cover rounded-2xl me-4 hidden md:block'/>
             </NavLink>
-          </Typography>
+          {/* </Typography> */}
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          {/* <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -136,27 +135,15 @@ function ResponsiveAppBar() {
               }}
             >
             </Menu>
-          </Box>
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href="#app-bar-with-responsive-menu"
-            sx={{
-              mr: 2,
-              display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
-              textDecoration: 'none',
-            }}
-          >
-            <img src={logo} alt="" />
-          </Typography>
+          </Box> */}
+     
+            <NavLink to="/">
+            <img src={logo} alt="logo"
+            className='w-28 h-8 object-cover rounded-lg block md:hidden'/> 
+            </NavLink>
+      
           <Search 
-          className='md:!w-96 !rounded-2xl'>
+          className='md:!w-96 !rounded-2xl !mx-2'>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>
